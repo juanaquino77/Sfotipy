@@ -1,4 +1,4 @@
-Spotify
+Sfotipy
 =======
 
-repositorio de spotify, musica en tu celular
+repositorio de sfotipy, musica en tu celular
