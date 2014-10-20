@@ -1,27 +1,63 @@
+
 @import "normalize.styl"
+@import "fonts.styl"
 
 gris_oscuro = #333333
 gris_claro  = #818181
+gris_mas_claro = #F0F0F0
 a
 	text-decoration none
 body
 	font-family 'Varela Round', sans-serif
 	font-size 16px
+	text-align center
 figure
 	margin 0
+img
+	vertical-align top
+ul
+	margin 0
+	padding 0
 //buttons
 .button-menu
 	position absolute
 	top 50%
 	margin-top -10px
 	left .5em
+	color gris_oscuro
 //oocss classes
+.center-block
+	display inline-block
+.center-text
+	text-align center
+.relative
+	position relative
 .container
 	padding 1.4rem
 	font-size 0
 	text-align center
+	margin 0 auto                                                            
+.actions
+	position absolute
+	bottom 0
+	right 0
+	left 0
+	background rgba(black,.3)
+.action
+	color white
+	margin-right .3em
+	font-size 1.2em
+	&:last-child
+		margin-right 0
+.description
+	border-bottom 2px solid gris_claro
+.play
+	.action
+		color gris_claro
+.right-text
+	text-align right		
 .border-bottom
-		border-bottom 1px solid gris_claro
+	border-bottom 1px solid gris_claro
 .name
 	color gris_oscuro
 .menu
@@ -30,6 +66,51 @@ figure
 	color gris_claro
 .relative
 	position relative
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.left
+	float left
+.right
+	float right
+.wrap
+	width 1000px
+.round
+	border-radius 50%
+	overflow hidden
+.progress
+	width 70%
+	margin 1em auto
+	position relative
+	.min
+		font-size .8em
+		position absolute
+		left -35px
+		top -6px
+	.max
+		font-size .8em
+		position absolute
+		right -35px
+		top -6px
+	.total
+		background gris_claro
+		height 5px
+		width 100%
+		border-radius 5px
+	.state
+		height 5px
+		border-radius 5px
+		width 30%
+		background red
+	.circle
+		height 10px
+		width 10px
+		background black
+		border-radius 50%
+		position absolute
+		right 0
+		top -2px
 .header
 	height 3.5em
 	//a
@@ -49,3 +130,108 @@ figure
 		margin-right 0
 	p
 		margin .5em 0
+.playing
+	display 
+	&.small
+		width 20em
+.input
+	border 1px solid gris_claro
+	height 2.5em
+	border-radius 5px
+	padding 0 1em 0 2em
+.search-icon
+	position absolute
+	left .5em
+	top .8em
+	color gris_claro
+	padding-right .3em
+	border-right 1px solid gris_claro
+.close-icon
+	position absolute
+	top .5em
+	color gris_claro
+	right .5em
+	font-size 1.2em 
+
+
+
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			width auto
+			display block
+
+@media screen and (min-width:1000px)
+	body
+		background gris_mas_claro
+	.button-menu
+		display none
+	.playing
+		&.large
+			margin 0 auto
+			width 62.5em
+			overflow hidden
+	.menu
+		display block
+		background gris_mas_claro
+		overflow hidden
+		.item
+			float left
+			list-style none
+			a
+				color gris_oscuro
+				text-transform uppercase
+				cursor pointer
+				padding 1em
+				display block
+				border-top 5px solid transparent
+				&:hover
+					border-top 5px solid gris_claro
+	.music
+		width 32.5em
+		float left
+	.playlist
+		width 22em
+		border-left solid 1px gris_claro
+		padding 0  2em
+		.list
+			list-style none
+		.item
+			padding 1em 0
+		.action
+			color gris_claro
+
+	.header
+		height auto
+		.title
+			display none
+	.isotipo
+		width 122px
+	.logo
+		padding 1.3em 0	
+		overflow hidden
+		background white
+	.avatar
+		width 38px
+		height 38px
+	.username
+		color gris_claro
+		position relative 
+		top 9px
+		margin-left .5em
+		&:after
+			content ""
+			border-left 7px solid transparent
+			border-top 9px solid gris_claro
+			border-right 7px solid transparent
+			display inline-block
+			margin-left .4em
+
+
